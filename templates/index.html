@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Government Schemes</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">🇮🇳 GovSchemes</div>
+
+        <ul class="nav-links">
+            <li><a href="#schemes">Schemes</a></li>
+            <li><a href="#eligibility">Eligibility</a></li>
+            <li><a href="#deadlines">Deadlines</a></li>
+            <li><a href="#walkthrough">Walkthroughs</a></li>
+            <li><a href="#documents">Documents</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find Indian Government Schemes Easily</h1>
+            <p>
+                Simple guides, eligibility details, application walkthroughs,
+                and document checklists — all in one place.
+            </p>
+
+            <a href="#schemes" class="btn">Explore Schemes</a>
+        </div>
+    </section>
+
+    <!-- Schemes Section -->
+    <section class="section" id="schemes">
+        <h2>Popular Government Schemes</h2>
+
+        <div class="cards">
+
+            {% for scheme in schemes %}
+
+            <div class="card">
+                <h3>{{ scheme.name }}</h3>
+
+                <p><strong>Eligibility:</strong> {{ scheme.eligibility }}</p>
+
+                <p><strong>Deadline:</strong> {{ scheme.deadline }}</p>
+
+                <p><strong>Documents:</strong> {{ scheme.documents }}</p>
+
+                
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </section>
+
+    <!-- Eligibility -->
+    <section class="info-section" id="eligibility">
+        <h2>Eligibility Criteria</h2>
+
+        <p>
+            Check income limits, category requirements,
+            land ownership details, and other eligibility rules
+            before applying for schemes.
+        </p>
+    </section>
+
+    <!-- Deadlines -->
+    <section class="info-section" id="deadlines">
+        <h2>Important Deadlines</h2>
+
+        <p>
+            Stay updated with scheme registration dates,
+            document submission deadlines, and renewal periods.
+        </p>
+    </section>
+
+    <!-- Walkthrough -->
+    <section class="info-section" id="walkthrough">
+        <h2>Application Walkthroughs</h2>
+
+        <p>
+            Step-by-step tutorials for filling forms,
+            uploading documents, and tracking applications online.
+        </p>
+    </section>
+
+    <!-- Documents -->
+    <section class="info-section" id="documents">
+        <h2>Document Checklist</h2>
+
+        <ul>
+            <li>Aadhaar Card</li>
+            <li>Income Certificate</li>
+            <li>Bank Passbook</li>
+            <li>Passport Size Photo</li>
+            <li>Ration Card</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 GovSchemes India | Made with ❤️ using Flask</p>
+    </footer>
+
+</body>
+</html>
