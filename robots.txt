@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://playwithdarkboyz-maker.github.io/Indian-Government-Schemes/sitemap.xml
